@@ -49,17 +49,15 @@ function getAjaxData(url, callback) {
 
 1. First get all spaceX launches. Using this api: https://api.spacexdata.com/v1/launches and the function i have created above.
 
-2. Then filter the successes. 
+2. Take the first launch and set the innerhtml of a span to the rocket_name.
 
-3. Take the first launch and set the innerhtml of a span to the rocket_name.
-
-4. Using the giphy api get a url of a gif with the query text of "success". It should have a rating above 4. 
+3. Using the giphy api get a url of a gif with the query text of "success". It should have a rating above 4. 
 
 const api_key = '2FuF3E9nyFeXWt3aHIfkxtKTUGn73v0w';
 const query = 'smile';
 const giphyUrl = 'http://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&q=' + query;
 
-5. set the src of a img to the gif url (look for the images key in the gifs object). 
+4. set the src of a img to the gif url (look for the images key in the gifs object). 
 
 */
 
@@ -71,9 +69,9 @@ const giphyUrl = 'http://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&q=
 
 1. Create an input element that takes a number from 1-6.
 
-2. Get the number from the input value.
+2. Get the number from the input value, when a button is clicked.
 
-3. Create a ul and add list elements that contains the names of the astronauts from this api: http://api.open-notify.org/astros.json
+3. Create a ul and add the number from the input of list elements, that contains the names of the astronauts from this api: http://api.open-notify.org/astros.json
 
 */
 
