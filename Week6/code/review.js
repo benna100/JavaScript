@@ -171,20 +171,19 @@ Lets try and use query strings to create get gifs from the giphy api that limits
 */
 
 
+const showGifs = function(gifs) {
+    console.log(gifs);
+
+    // how would we now get astronauts?
+    getAjaxData(giphyUrl, getGifs);  
+}
+
 function getGifs(gifSearchQuery) {
     const api_key = '2FuF3E9nyFeXWt3aHIfkxtKTUGn73v0w';
     const query = gifSearchQuery;
     const giphyUrl = 'http://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&q=' + query;
 
-    const getGifs = function(gifs) {
-        console.log(gifs);
-
-
-        // how would we now get astronauts?
-        getAjaxData(giphyUrl, getGifs);  
-    }
-
-    getAjaxData(giphyUrl, getGifs);  
+    getAjaxData(giphyUrl, showGifs);  
 }
 
 getGifs('smile');
